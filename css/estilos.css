@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Goblin+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+/*Variables*/
+/*FUNCIONES*/
+/*ESTILOS GENERALES*/
+body {
+  background-color: #020202;
+  color: white; }
+
+/*BARRA DE NAVEGACION CON DIFERENTES ESTILOS AL INDEX*/
+.navegacion {
+  background-color: #151515; }
+
+/*--------------------------
+---ESTILOS DEL INDEX------
+--------------------------*/
+.barra {
+  background-color: #151515; }
+
+@media (min-width: 768px) {
+  .barra {
+    background-color: transparent;
+    position: absolute;
+    z-index: 100;
+    width: 100%; }
+  .header {
+    position: relative; }
+  .barra nav {
+    background-color: transparent; } }
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px; }
+  .nav-link:hover {
+    color: white; }
+
+.logo {
+  font-family: 'Goblin One', cursive;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: white;
+  padding-top: 7px; }
+  .logo:hover {
+    color: white;
+    text-decoration: none; }
+
+.main__titulo {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+.main__texto {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.8); }
+
+.sobreNosotros {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.8)); }
+  .sobreNosotros h2 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px; }
+  .sobreNosotros p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline; }
+
+.nosotros h3 {
+  font-family: "Playfair Display", serif;
+  color: whitesmoke; }
+
+.nosotros:hover {
+  cursor: pointer; }
+
+.nosotros:hover p {
+  opacity: 1; }
+
+.nosotros p {
+  color: #999;
+  opacity: 0;
+  transition: .8s ease;
+  text-decoration: none; }
+
+.galeria h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+#parallax {
+  background-image: url("../images/reservar(1).jpg");
+  height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #parallax h2 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px; }
+
+.footer {
+  background-color: #151515; }
+  .footer h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    text-decoration: underline; }
+  .footer .contacto p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0; }
+
+/*--------------------------
+---ESTILOS DE HAMBURGUESAS------
+--------------------------*/
+.tituloHamburguesa {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+.hamburguesa {
+  position: relative; }
+
+.descripcionHamburguesa {
+  position: absolute;
+  top: 0;
+  text-align: justify;
+  color: white;
+  text-align: center;
+  width: 93.5%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: .3s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto Condensed", sans-serif; }
+
+.hamburguesa:hover .descripcionHamburguesa {
+  transform: scale(1); }
+
+/*--------------------------
+---ESTILOS DE CERVEZAS------
+--------------------------*/
+.tituloCerveza {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+.cerveza {
+  position: relative; }
+
+.nombreCerveza {
+  position: absolute;
+  bottom: -3%;
+  text-transform: uppercase;
+  color: black;
+  width: 92.4%;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.6));
+  font-family: "Roboto Condensed", sans-serif; }
+
+/*--------------------------
+---ESTILOS DE LOCALES------
+--------------------------*/
+.tituloLocales {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+/*--------------------------
+---ESTILOS DE RESERVAS------
+--------------------------*/
+.tituloReserva {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px; }
+
+.contenedorReserevas {
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  background-color: #191919; }

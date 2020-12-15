@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+
+/*Variables*/
+$funteTitulo:'Playfair Display', serif;
+$fuenteParrafos:'Roboto Condensed', sans-serif;
+$colorSecundario: #151515;
+
+
+/*FUNCIONES*/
+@mixin estiloTitulos {
+    font-family: $funteTitulo;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+@mixin estilosParrafos{
+    font-family: $fuenteParrafos;
+    font-size: 18px;
+    letter-spacing:0;
+    color: rgba(255,255,255,0.8);
+}
+
+/*ESTILOS GENERALES*/
+
+body{
+    background-color: #020202;
+    color: white;
+}
+
+/*BARRA DE NAVEGACION CON DIFERENTES ESTILOS AL INDEX*/
+.navegacion{
+    background-color: #151515;
+}
+
+/*--------------------------
+---ESTILOS DEL INDEX------
+--------------------------*/
+
+.barra{
+    background-color: #151515;
+}
+
+@media (min-width: 768px){
+    .barra{
+        background-color: transparent;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+    }
+    .header{
+        position: relative;
+    }
+    .barra nav{
+        background-color: transparent;
+    }
+}
+
+.nav-link{
+    color: rgba(255,255,255,0.8);
+    font-size: 17px;
+    &:hover{
+        color: rgba(255,255,255,1);
+    }
+}
+.logo{
+    font-family: 'Goblin One', cursive;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: white;
+    padding-top: 7px;
+    &:hover{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.main__titulo{
+    @include estiloTitulos;
+}
+
+.main__texto{
+    @include estilosParrafos;
+}
+
+.sobreNosotros{
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.8));
+    h2{
+        @include estiloTitulos;
+    }
+    p{
+        @include estilosParrafos;
+        text-decoration:underline;
+    }
+}
+.nosotros{
+    h3{
+        font-family: $funteTitulo;
+        color: whitesmoke;
+    }
+    &:hover{
+        cursor: pointer;}
+        &:hover p{
+            opacity: 1;
+        }
+            p{
+                color: #999;
+                opacity: 0;
+                transition: .8s ease;
+                text-decoration: none;
+            }
+}
+.galeria h2{
+    @include estiloTitulos;
+}
+
+
+
+#parallax{
+    h2{
+        @include estiloTitulos;
+    }
+    
+    background-image: url("../images/reservar\(1\).jpg");
+  
+    height: 450px;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.footer{
+    background-color: #151515;
+    h4{
+        font-family: $funteTitulo;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    .contacto p{
+        @include estilosParrafos;
+        margin: 0;
+    }
+}
+
+/*--------------------------
+---ESTILOS DE HAMBURGUESAS------
+--------------------------*/
+
+.tituloHamburguesa {
+    @include estiloTitulos;
+}
+.hamburguesa{
+    position: relative;
+}
+.descripcionHamburguesa{
+    position: absolute;
+    top:0;
+    text-align: justify;
+    color: white;
+    text-align: center;
+    width: 93.5%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5) ;
+    transform: scale(0);
+    transition: .3s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fuenteParrafos;
+}
+.hamburguesa:hover .descripcionHamburguesa{
+    transform: scale(1);
+}
+
+
+/*--------------------------
+---ESTILOS DE CERVEZAS------
+--------------------------*/
+
+.tituloCerveza{
+    @include estiloTitulos;
+}
+.cerveza{
+    position: relative;
+}
+.nombreCerveza{
+    position: absolute;
+    bottom:-3%;
+    text-transform: uppercase;
+    color: black;
+    width: 92.4%;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0,0.6));
+    font-family: $fuenteParrafos;
+}
+
+/*--------------------------
+---ESTILOS DE LOCALES------
+--------------------------*/
+.tituloLocales{
+    @include estiloTitulos;
+}
+
+
+/*--------------------------
+---ESTILOS DE RESERVAS------
+--------------------------*/
+.tituloReserva{
+    @include estiloTitulos;
+}
+
+.contenedorReserevas{
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 0 rgba(255,255,255,0.3);
+    background-color: #191919;;
+}
