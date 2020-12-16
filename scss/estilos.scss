@@ -15,14 +15,14 @@ $colorSecundario: #151515;
     font-family: $funteTitulo;
     text-align: center;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 @mixin estilosParrafos{
     font-family: $fuenteParrafos;
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing:0;
-    color: rgba(255,255,255,0.8);
+    color:#999;
 }
 
 /*ESTILOS GENERALES*/
@@ -61,15 +61,15 @@ body{
 }
 
 .nav-link{
-    color: rgba(255,255,255,0.8);
-    font-size: 17px;
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
     &:hover{
         color: rgba(255,255,255,1);
     }
 }
 .logo{
     font-family: 'Goblin One', cursive;
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 0px;
     color: white;
     padding-top: 7px;
@@ -88,15 +88,35 @@ body{
 }
 
 .sobreNosotros{
-    background: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.8));
+    background-image: url(../images/fondomesa.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     h2{
         @include estiloTitulos;
+        position: relative;
     }
     p{
         @include estilosParrafos;
-        text-decoration:underline;
+        position: relative;
+        text-decoration: underline;
+        color: white;
     }
 }
+.sobreNosotros::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+
+
 .nosotros{
     h3{
         font-family: $funteTitulo;
@@ -108,7 +128,8 @@ body{
             opacity: 1;
         }
             p{
-                color: #999;
+                @include estilosParrafos;
+                color:white;
                 opacity: 0;
                 transition: .8s ease;
                 text-decoration: none;
@@ -120,21 +141,25 @@ body{
 
 
 
-#parallax{
+#haceTuReserva{
     h2{
         @include estiloTitulos;
+        font-size: 26px;
     }
-    
-    background-image: url("../images/reservar\(1\).jpg");
-  
-    height: 450px;
-  
+
+    background-image: url("../images/reservar\(1\).jpg");  
+    height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
   }
 
+#haceTuReserva::before{
+    @extend .sobreNosotros::before;
+    opacity: 0.6;
+}
 
 .footer{
     background-color: #151515;
@@ -174,6 +199,7 @@ body{
     flex-direction: column;
     justify-content: center;
     font-family: $fuenteParrafos;
+    font-size: 22px;
 }
 .hamburguesa:hover .descripcionHamburguesa{
     transform: scale(1);
