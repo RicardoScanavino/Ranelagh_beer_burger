@@ -168,9 +168,18 @@ body{
         font-size: 22px;
         text-decoration: underline;
     }
-    .contacto p{
-        @include estilosParrafos;
-        margin: 0;
+    p{
+        font-family: $fuenteParrafos;
+        font-size: 18px;
+    }
+    .redes{
+        input{
+            border: 1px solid #6C757D;
+            border-radius: 0px;
+        }
+        button{
+            border-radius: 0px;
+        }
     }
 }
 
@@ -192,7 +201,7 @@ body{
     text-align: center;
     width: 93.5%;
     height: 100%;
-    background-color: rgba(0,0,0, 0.5) ;
+    background-color: rgba(0,0,0, 0.6) ;
     transform: scale(0);
     transition: .3s ease-in;
     display: flex;
@@ -213,27 +222,30 @@ body{
 .tituloCerveza{
     @include estiloTitulos;
 }
-.cerveza{
-    position: relative;
-}
-.nombreCerveza{
-    position: absolute;
-    bottom:-3%;
-    text-transform: uppercase;
-    color: black;
-    width: 92.4%;
-    background: linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0,0.6));
-    font-family: $fuenteParrafos;
-}
 
+.card-body{
+    color: #020202;
+    .card-title{
+        font-family: $funteTitulo;
+        text-transform: uppercase;
+    }
+    .list-group-item{
+        font-family: $fuenteParrafos;
+    }
+}
+ 
 /*--------------------------
 ---ESTILOS DE LOCALES------
 --------------------------*/
 .tituloLocales{
     @include estiloTitulos;
 }
-
-
+.nombreLocal{
+    font-family: $funteTitulo
+}
+.descripcionLocales{
+    @include estilosParrafos;
+}
 /*--------------------------
 ---ESTILOS DE RESERVAS------
 --------------------------*/
