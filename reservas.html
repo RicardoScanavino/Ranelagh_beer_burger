@@ -11,6 +11,10 @@
 </head>
 
 <body>
+
+    <!--------------------
+    inicio de la navegacion
+    ---------------------->
     <header class="navegacion">
         <div class="container-fluid">
             <nav class="navbar navbar-dark navbar-expand-lg">
@@ -42,11 +46,15 @@
         </div>
     </header>
 
-    <main>
-        <h1 class="tituloReserva mt-5">
+
+    <!--------------------
+    inicio de reservas
+    ---------------------->
+    <main id="reservas">
+        <h1 class="tituloReserva py-4">
             reservas
         </h1>
-        <div class="container-fluid contenedorReserevas py-4 my-5">
+        <div class="container-fluid contenedorReserevas py-5">
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <label for="nombre">Nombre</label>
@@ -81,14 +89,16 @@
                     <label for="hora">Indique la hora de reserva</label>
                     <input type="time" class="form-control" name="hora" placeholder="Ingrese hora">
                 </div>
-                <div class="col-12 col-lg-6 mt-4 align-self-center">
+                <div class="col-12 col-lg-6 mt-4 align-self-center ">
                     <button type="button" class="btn btn-primary">Reservar</button>
                 </div>
-                
-
             </div>
         </div>
     </main>
+
+    <!--------------------
+    inicio del footer 
+    ---------------------->
 
     <footer class="footer">
         <div class="container">
@@ -136,6 +146,7 @@
             </div>
         </div>
     </footer>
+
     <!--------------------
     fin del footer
     ---------------------->

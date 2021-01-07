@@ -65,6 +65,8 @@ body{
     font-size: 18px;
     &:hover{
         color: rgba(255,255,255,1);
+        scale: 1.1;
+        text-decoration: underline;
     }
 }
 .logo{
@@ -129,11 +131,15 @@ body{
         }
             p{
                 @include estilosParrafos;
-                color:white;
-                opacity: 0;
+                opacity: 1;
                 transition: .8s ease;
                 text-decoration: none;
             }
+}
+@media (min-width: 576px){
+    .nosotros p {
+        opacity: 0;
+    }
 }
 .galeria h2{
     @include estiloTitulos;
@@ -202,7 +208,7 @@ body{
     width: 93.5%;
     height: 100%;
     background-color: rgba(0,0,0, 0.6) ;
-    transform: scale(0);
+    transform: scale(1);
     transition: .3s ease-in;
     display: flex;
     flex-direction: column;
@@ -210,8 +216,13 @@ body{
     font-family: $fuenteParrafos;
     font-size: 22px;
 }
-.hamburguesa:hover .descripcionHamburguesa{
-    transform: scale(1);
+@media (min-width: 576px){
+    .descripcionHamburguesa{
+        transform: scale(0);
+    }
+    .hamburguesa:hover .descripcionHamburguesa{
+        transform: scale(1);
+    }
 }
 
 
@@ -249,13 +260,31 @@ body{
 /*--------------------------
 ---ESTILOS DE RESERVAS------
 --------------------------*/
+
 .tituloReserva{
     @include estiloTitulos;
+    position: relative;
+}
+#reservas{
+    background-image: url(../images/fondoReserva.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100px;
 }
 
+#reservas::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
 .contenedorReserevas{
+    border-radius: 20px;
     width: 60%;
     margin: 0 auto;
     box-shadow: 0 0 20px 0 rgba(255,255,255,0.3);
-    background-color: #191919;;
+    background-color:rgba(0,0,0, 0.8);
 }
